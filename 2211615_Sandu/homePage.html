@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/home.css">
+    <title>Home | Sandu's Den</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+</head>
+<body>
+    <div class="logout" id="logout">
+        <a href="./index.html" class="btn">Logout</a>
+    </div>
+
+    <div class="content">
+        <div class="tabs">
+            <span data-tab-value="#tab_1" >current users</span>
+            <span data-tab-value="#tab_2">create a user</span>
+        </div>
+    
+        <div class="tab-content">
+            <div class="tabs__tab " id="tab_1"  data-tab-info >
+                <div>
+                    <h5>admin: test@gmail.com</h5>
+                </div>
+                <ul id="myUl"></ul>
+            </div>  
+    
+        <div class="tabs__tab" id="tab_2" data-tab-info>
+            <form id="register" class="input-group">
+                <div> <input autocomplete="off" type="text" id="Nuser" class="input-field " placeholder="Username" required></div>
+                <div>
+                    <i class="fa-solid fa-eye pw-icon"></i>
+                    <input autocomplete="off" type="password" id="Npass" class="input-field " placeholder="Password" required></div>
+                <br>
+                <div><input type="checkbox" id="checkB" class="check-box">
+                    <label for="checkB">agree to terms </label>        </div>
+                <div> <button  onclick="register(event)" class="submit-btn">register</button></div>   
+            </form>
+          
+        </div>
+
+    </div>
+
+
+
+<script src="home.js"></script>
+</body>
+</html>

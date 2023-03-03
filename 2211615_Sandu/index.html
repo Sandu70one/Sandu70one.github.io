@@ -1,51 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/home.css">
-    <title>Home | Sandu's Den</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sandu's Den</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-
+    <link rel="stylesheet" href="./styles/styles.css" />
 </head>
+
 <body>
-    <div class="logout" id="logout">
-        <a href="./login.html" class="btn">Logout</a>
-    </div>
-
-    <div class="content">
-        <div class="tabs">
-            <span data-tab-value="#tab_1" >current users</span>
-            <span data-tab-value="#tab_2">create a user</span>
+    <div class="container">
+        <div class="left">
+            Welcome to
+            <h1>Sandu's Den</h1>
         </div>
-    
-        <div class="tab-content">
-            <div class="tabs__tab " id="tab_1"  data-tab-info >
-                <div>
-                    <h5>admin: test@gmail.com</h5>
+
+        <div class="right">
+            <div class="signup-container">
+                <div class="top">
+                    <div class="line line-1"></div>
+                    <div class="title">Signin</div>
+                    <div class="line line-2"></div>
                 </div>
-                <ul id="myUl"></ul>
-            </div>  
-    
-        <div class="tabs__tab" id="tab_2" data-tab-info>
-            <form id="register" class="input-group">
-                <div> <input autocomplete="off" type="text" id="Nuser" class="input-field " placeholder="Username" required></div>
-                <div>
-                    <i class="fa-solid fa-eye pw-icon"></i>
-                    <input autocomplete="off" type="password" id="Npass" class="input-field " placeholder="Password" required></div>
-                <br>
-                <div><input type="checkbox" id="checkB" class="check-box">
-                    <label for="checkB">agree to terms </label>        </div>
-                <div> <button  onclick="register(event)" class="submit-btn">register</button></div>   
-            </form>
-          
+
+                <div id="error">Wrong Username or Password</div>
+
+                <div class="profilePic">
+                    <div class="round">
+                        <div class="pic">
+                            <img src="./img/My project.jpg" alt="avatar">
+                        </div>
+                    </div>
+                </div>
+
+                <form method="get" >
+                    <ul class="signup-field">
+                        <li>
+                            <input id="username"  autocomplete="off" type="text" spellcheck="false" name="username" required />
+                            <label for="inputs">Username </label>
+                            <div class="input-line"></div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-eye pw-icon"></i>
+                            <input type="password"  autocomplete="off" name="password" id="password" required />
+                            <label for="inputs">Password</label>
+                            <div class="input-line"></div>
+                        </li>
+                    </ul>
+                    <input type="button" onclick="login()" value="Signin" class="signup-btn">
+                </form>
+
+                <div class="fPass">
+                    <a href="#">Forgot Password ?</a>
+                    <span>Don't have an account ? <a href="#">Signup</a></span>                                                                     
+                </div>
+
+            </div>
         </div>
 
     </div>
 
-
-
-<script src="home.js"></script>
+    <script src="./login.js"></script>
 </body>
+
 </html>
