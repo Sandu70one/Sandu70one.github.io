@@ -69,7 +69,7 @@ function login(){
     var pass=document.getElementById("password").value;
     for(i=0 ; i<users.length; i++){
         if(user===users[i].username && pass===users[i].password){
-            window.location.href = "./homePage.html";
+            window.location.href = "./index.html";
             return;
         } else{
             console.log("wrong")
